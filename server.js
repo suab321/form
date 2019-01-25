@@ -7,7 +7,8 @@ var tesseract = require('node-tesseract');
 const cors=require('cors');
 app.use(cors());
 app.use(function(req,res,next){
-  res.header('Access-Control-Allow-Origin','*')
+  res.header('Access-Control-Allow-Origin','*');
+    next();
 })
 var Port=process.env.PORT;
 

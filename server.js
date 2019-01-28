@@ -32,7 +32,7 @@ var Storage = multer.diskStorage({
 });
 var upload = multer({
     storage: Storage
-}).array("file",10000); //Field name and max count
+}).single("file",1000000); //Field name and max count
 app.get("/", function(req, res) {
     res.sendFile(__dirname + "/index.html");
 });
